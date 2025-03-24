@@ -9,4 +9,12 @@ header {
 }
 .content {
   padding: var(--content-padding);
+  background-color: rgb(243, 244, 246);
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }
