@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-field',
@@ -11,9 +11,16 @@ import { Component } from '@angular/core';
       name="name"
       id="name"
       required
+      (input)="cb()"
     />
     <label for="name" class="form__label">Name</label>
   </div>`,
   styleUrls: ['input-field.component.css'],
 })
-export class InputFieldComponent {}
+export class InputFieldComponent {
+  testFunc = () => {
+    console.log('heya');
+  };
+
+  @Input() cb!: () => void;
+}

@@ -10,7 +10,7 @@ import { InputFieldComponent } from '../input-field/input-field.component';
   selector: 'app-appids-list',
   imports: [CommonModule, AppIdItem, AppIdItemHeader, InputFieldComponent],
   template: `
-    <app-input-field />
+    <app-input-field [cb]="testFunc" />
     <!-- <form>
       <input type="text" placeholder="Filter by ID" #filter />
       <button
@@ -30,6 +30,10 @@ export class AppidsListComponent {
   appIdsService: AppIdsService = inject(AppIdsService);
   appIdsList: AppId[] = [];
   filteredAppIdsList: AppId[] = [];
+
+  testFunc = () => {
+    console.log('Ping from test func');
+  };
 
   filterResults(text: string) {
     if (!text) {
