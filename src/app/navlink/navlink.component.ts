@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-navlink',
   imports: [RouterLink],
   template: `<a class="navlink-link" [routerLink]="linkedItem">Test Text</a>`,
-  styleUrls: ['./navlink.component.css'],
+  styleUrls: ['navlink.component.css'],
 })
 export class NavlinkComponent {
     @Input() linkedItem!: string;

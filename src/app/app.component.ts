@@ -11,7 +11,7 @@ import { NavlinkComponent } from './navlink/navlink.component';
         <h1>Header</h1>
         <nav>
           <a [routerLink]="['/']"> AppIds List </a>
-          <app-navlink [linkedItem]="'link-yo'"></app-navlink>
+          <app-navlink [linkedItem]="'appidslist'"></app-navlink>
         </nav>
       </header>
 
