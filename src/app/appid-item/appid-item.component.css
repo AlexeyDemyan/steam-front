@@ -1,0 +1,5 @@
+.appid-item {
+  display: flex;
+  flex-direction: column;
+  background-color: chartreuse;
+}

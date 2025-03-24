@@ -8,10 +8,11 @@ import { NavlinkComponent } from './navlink/navlink.component';
   template: `
     <main>
       <header class="brand-name">
-        <h1>Header</h1>
+        <a [routerLink]="['/']">
+          <h1>Main Menu</h1>
+        </a>
         <nav>
-          <a [routerLink]="['/']"> AppIds List </a>
-          <app-navlink [linkedItem]="'appidslist'"></app-navlink>
+          <app-navlink [linkedItem]="'appidslist'" [linkText]="'App IDs List'"></app-navlink>
         </nav>
       </header>
 
