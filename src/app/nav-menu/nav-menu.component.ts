@@ -1,41 +1,12 @@
 import { Component } from '@angular/core';
+import { NavlinkComponent } from './navlink.component';
 
 @Component({
   selector: 'app-nav-menu',
-  imports: [],
+  imports: [NavlinkComponent],
   template: `<nav class="menu" id="nav">
-    <span class="nav-item active">
-      <span class="icon">
-        <i data-feather="home"></i>
-      </span>
-      <a href="#">Home</a>
-    </span>
-    <span class="nav-item">
-      <span class="icon">
-        <i data-feather="search"></i>
-      </span>
-      <a href="#">Search</a>
-    </span>
-    <span class="nav-item">
-      <span class="icon">
-        <span class="subicon">13</span>
-        <i data-feather="bell"></i>
-      </span>
-      <a href="#">Notifications</a>
-    </span>
-    <span class="nav-item">
-      <span class="icon">
-        <i data-feather="star"></i>
-      </span>
-      <a href="#">Favorites</a>
-    </span>
-    <span class="nav-item">
-      <span class="icon">
-        <span class="subicon">1</span>
-        <i data-feather="bell"></i>
-      </span>
-      <a href="#">Your Profile</a>
-    </span>
+    <app-navlink [linkedItem]="'/'" [linkText]="'Main Menu'"/>
+    <app-navlink [linkedItem]="'appidslist'" [linkText]="'App IDs List'"/>
   </nav> `,
   styleUrls: ['nav-menu.component.css'],
 })

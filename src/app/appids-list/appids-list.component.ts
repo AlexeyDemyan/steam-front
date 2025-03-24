@@ -3,13 +3,11 @@ import { CommonModule } from '@angular/common';
 import { AppIdItem } from '../appid-item/appid-item.component';
 import { AppId } from '../appid-item/appid-item.type';
 import { AppIdsService } from '../services/appids.service';
-import { NavMenuComponent } from '../nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-appids-list',
-  imports: [CommonModule, AppIdItem, NavMenuComponent],
+  imports: [CommonModule, AppIdItem],
   template: `
-    <app-nav-menu />
     <app-appid-item *ngFor="let appid of appIdsList" [appId]="appid" />
   `,
   styleUrls: ['appids-list.component.css'],
