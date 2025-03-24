@@ -12,7 +12,7 @@ import { AppIdsService } from '../services/appids.service';
     <app-appid-item-header />
     <app-appid-item *ngFor="let appid of appIdsList" [appId]="appid" />
   `,
-  styleUrls: ['appids-list.component.css'],
+  styleUrls: [],
 })
 export class AppidsListComponent {
   appIdsService: AppIdsService = inject(AppIdsService);
