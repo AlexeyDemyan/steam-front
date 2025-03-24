@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavlinkComponent } from './navlink/navlink.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet, NavlinkComponent],
+  imports: [RouterLink, RouterOutlet, NavlinkComponent, NavMenuComponent],
   template: `
     <main>
       <header class="brand-name">
-        <a [routerLink]="['/']">
+        <app-nav-menu/>
+        <!-- <a [routerLink]="['/']">
           <h1>Main Menu</h1>
         </a>
         <nav>
           <app-navlink [linkedItem]="'appidslist'" [linkText]="'App IDs List'"></app-navlink>
-        </nav>
+        </nav> -->
       </header>
 
       <section class="content">
