@@ -5,9 +5,15 @@ import { AppId } from './appid-item.type';
   selector: 'app-appid-item',
   imports: [],
   template: `<div class="appid-item">
-    <p>{{ appId.appid }}</p>
-    <p>{{ appId.created_at }}</p>
-    <p>{{ appId.updated_at }}</p>
+    <div class="appid-item-text">
+      <p>{{ appId.appid }}</p>
+    </div>
+    <div class="appid-item-text">
+      <p>{{ appId.created_at }}</p>
+    </div>
+    <div class="appid-item-text">
+      <p>{{ appId.updated_at }}</p>
+    </div>
   </div>`,
   styleUrls: ['appid-item.component.css'],
 })

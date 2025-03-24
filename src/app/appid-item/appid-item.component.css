@@ -1,5 +1,17 @@
 .appid-item {
   display: flex;
-  flex-direction: column;
-  background-color: chartreuse;
+  flex-direction: row;
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.685);
+}
+
+.appid-item-text {
+  min-width: 250px;
+}
+
+.appid-item-header {
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid black;
 }
