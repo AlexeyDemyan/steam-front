@@ -6,12 +6,20 @@ import { AppId } from '../appid-item/appid-item.type';
 import { AppIdsService } from '../services/appids.service';
 import { InputFieldComponent } from '../input-field/input-field.component';
 import { AppIdSearchField } from '../input-field/appid-search-field.type';
+import { FiltersContainerComponent } from '../filters-container/filters-container.component';
 
 @Component({
   selector: 'app-appids-list',
-  imports: [CommonModule, AppIdItem, AppIdItemHeader, InputFieldComponent],
+  imports: [
+    CommonModule,
+    AppIdItem,
+    AppIdItemHeader,
+    InputFieldComponent,
+    FiltersContainerComponent,
+  ],
   template: `
     <app-input-field [settings]="searchFieldSettings" />
+    <app-filters-container />
     <app-appid-item-header />
     <app-appid-item *ngFor="let appid of filteredAppIdsList" [appId]="appid" />
   `,
