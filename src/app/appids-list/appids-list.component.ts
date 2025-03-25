@@ -12,16 +12,6 @@ import { AppIdSearchField } from '../input-field/appid-search-field.type';
   imports: [CommonModule, AppIdItem, AppIdItemHeader, InputFieldComponent],
   template: `
     <app-input-field [settings]="searchFieldSettings" />
-    <!-- <form>
-      <input type="text" placeholder="Filter by ID" #filter />
-      <button
-        class="primary"
-        type="button"
-        (click)="filterResults(filter.value)"
-      >
-        Search
-      </button>
-    </form> -->
     <app-appid-item-header />
     <app-appid-item *ngFor="let appid of filteredAppIdsList" [appId]="appid" />
   `,
