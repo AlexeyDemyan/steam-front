@@ -18,5 +18,5 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'homes';
+  title = 'Apps';
 }
