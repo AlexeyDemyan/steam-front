@@ -1,26 +1,26 @@
 import { Component, Input } from '@angular/core';
+import { AppIdSearchField } from './appid-search-field.type';
 
 @Component({
   selector: 'app-input-field',
   imports: [],
   template: `<div class="form__group field">
     <input
-      type="input"
-      class="form__field"
-      placeholder="Name"
-      name="name"
-      id="name"
+      [type]="settings.inputType"
+      [class]="'form__field ' + settings.class"
+      [placeholder]="settings.placeholder"
+      [name]="settings.name"
+      [id]="settings.id"
       required
-      (input)="cb()"
+      (input)="settings.cb(inputField.value)"
+      #inputField
     />
-    <label for="name" class="form__label">Name</label>
+    <label for="settings.name" class="form__label">{{
+      settings.placeholder
+    }}</label>
   </div>`,
   styleUrls: ['input-field.component.css'],
 })
 export class InputFieldComponent {
-  testFunc = () => {
-    console.log('heya');
-  };
-
-  @Input() cb!: () => void;
+  @Input() settings!: AppIdSearchField;
 }

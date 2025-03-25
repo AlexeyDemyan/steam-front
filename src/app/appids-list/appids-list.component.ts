@@ -5,12 +5,13 @@ import { AppIdItemHeader } from '../appid-item/appid-item-header.component';
 import { AppId } from '../appid-item/appid-item.type';
 import { AppIdsService } from '../services/appids.service';
 import { InputFieldComponent } from '../input-field/input-field.component';
+import { AppIdSearchField } from '../input-field/appid-search-field.type';
 
 @Component({
   selector: 'app-appids-list',
   imports: [CommonModule, AppIdItem, AppIdItemHeader, InputFieldComponent],
   template: `
-    <app-input-field [cb]="testFunc" />
+    <app-input-field [settings]="searchFieldSettings" />
     <!-- <form>
       <input type="text" placeholder="Filter by ID" #filter />
       <button
@@ -31,8 +32,15 @@ export class AppidsListComponent {
   appIdsList: AppId[] = [];
   filteredAppIdsList: AppId[] = [];
 
-  testFunc = () => {
-    console.log('Ping from test func');
+  searchFieldSettings: AppIdSearchField = {
+    inputType: 'input',
+    class: 'test-class',
+    placeholder: 'App ID',
+    name: 'appid',
+    id: 'appid',
+    cb: (arg) => {
+      this.filterResults(arg);
+    },
   };
 
   filterResults(text: string) {
