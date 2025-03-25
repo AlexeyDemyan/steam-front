@@ -5,7 +5,7 @@ import { NavlinkComponent } from './navlink.component';
   selector: 'app-nav-menu',
   imports: [NavlinkComponent],
   template: `<nav class="menu" id="nav">
-    <app-navlink [linkedItem]="'/'" [linkText]="'Main Menu'"/>
+    <app-navlink [linkedItem]="'home'" [linkText]="'Main Menu'"/>
     <app-navlink [linkedItem]="'appidslist'" [linkText]="'App IDs List'"/>
   </nav> `,
   styleUrls: ['nav-menu.component.css'],

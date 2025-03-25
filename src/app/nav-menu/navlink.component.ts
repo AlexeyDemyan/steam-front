@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navlink',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   template: `
-    <span class="nav-item active">
+    <span [class]="'nav-item'" routerLinkActive="active">
       <span class="icon">
         <span class="subicon">13</span>
         <i data-feather="home"></i>

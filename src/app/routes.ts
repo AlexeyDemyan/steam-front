@@ -4,7 +4,7 @@ import { AppidsListComponent } from './appids-list/appids-list.component';
 
 const routeConfig: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     title: 'Home Page',
   },
