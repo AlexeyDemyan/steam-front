@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { FiltersContainerComponent } from '../filters-container/filters-container.component';
+import { AppItemComponent } from '../app-item/app-item.component';
 
 @Component({
   selector: 'app-apps-list',
-  imports: [FiltersContainerComponent],
+  imports: [FiltersContainerComponent, AppItemComponent],
   template: `
     <app-filters-container />
-    <h1>Apps List component here!</h1>
+    <app-app-item />
+    <app-app-item />
+    <app-app-item />
   `,
   styleUrls: [],
 })

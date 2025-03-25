@@ -1,0 +1,16 @@
+.app-item-box {
+    height: 180px;
+    width: 800px;
+    border: 1px solid #272424;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.app-item-box:hover {
+    border-color: #161313;
+    box-shadow: 4px 4px 4px 2px rgb(0 0 0 / 20%);
+}
+
+.app-item-container {
+    padding: 10px;
+}
