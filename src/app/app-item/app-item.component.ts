@@ -48,9 +48,9 @@ import { RatingComponent } from './rating-component';
       </summary>
       <div class="extra-info">
         <app-app-item-rating />
-        <div class="comment">Comment field here</div>
+        <!-- <div class="comment">Comment field here</div>
         <div class="user-tags">User tags here</div>
-        <div class="delete-button">[Delete]</div>
+        <div class="delete-button">[Delete]</div> -->
       </div>
     </details>
   `,
