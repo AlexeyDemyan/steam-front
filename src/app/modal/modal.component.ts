@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
   imports: [],
   template: `
-    <button id="myBtn" (click)="openModal()">Open Modal</button>
-    <div id="myModal" class="modal">
+    <button id="myBtn" (click)="cb()">Open Modal</button>
+    <div id="myModal" class="modal" #modal>
       <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
+        <span class="close" (click)="closeModal(modal)">&times;</span>
         <p>Some text in the Modal..</p>
       </div>
     </div>
@@ -15,11 +15,13 @@ import { Component } from '@angular/core';
   styleUrls: ['modal.component.css'],
 })
 export class ModalComponent {
-  openModal = () => {
-    console.log('opening modal');
+  @Input() cb!: () => void;
+  
+  openModal = (modal: HTMLDivElement) => {
+    modal.style.display = 'block';
   };
 
-  closeModal = () => {
-    console.log('closing modal');
+  closeModal = (modal: HTMLDivElement) => {
+    modal.style.display = 'none';
   };
 }

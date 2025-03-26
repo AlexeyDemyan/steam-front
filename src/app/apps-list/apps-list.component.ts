@@ -11,7 +11,6 @@ import { ModalComponent } from '../modal/modal.component';
     <app-app-item />
     <app-app-item />
     <app-app-item />
-    <app-modal />
   `,
   styleUrls: [],
 })

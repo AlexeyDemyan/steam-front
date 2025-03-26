@@ -85,6 +85,7 @@ summary:hover {
 }
 
 .delete-button {
+  cursor: pointer;
   grid-area: delete;
   display: flex;
   justify-content: flex-end;
