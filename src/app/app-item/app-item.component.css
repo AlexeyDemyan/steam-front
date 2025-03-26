@@ -1,32 +1,17 @@
-/* details {
-  user-select: none;
-} */
-
-/* details>summary span.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s;
-  margin-left: auto;
-} */
-
-/* details[open] summary span.icon {
-  transform: rotate(180deg);
-} */
-
 summary {
   display: flex;
-  cursor: pointer;
+  margin-top: 20px;
 }
 
-/* summary::-webkit-details-marker {
-  display: none;
-} */
+.extra-info {
+  min-height: 30px;
+  background-color: yellowgreen;
+}
 
 .app-item-box {
   height: 180px;
   width: 1200px;
   border: 1px solid #272424;
-  margin-bottom: 10px;
   box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
   cursor: pointer;
   background-color: #1f3441;

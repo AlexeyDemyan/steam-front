@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RatingComponent } from './rating-component';
 
 @Component({
   selector: 'app-app-item',
-  imports: [],
+  imports: [RatingComponent],
   template: `
     <details>
       <summary>
@@ -45,7 +46,12 @@ import { Component } from '@angular/core';
           </div>
         </div>
       </summary>
-      <h3>Some other stuff</h3>
+      <div class="extra-info">
+        <app-app-item-rating />
+        <div class="comment">Comment field here</div>
+        <div class="user-tags">User tags here</div>
+        <div class="delete-button">[Delete]</div>
+      </div>
     </details>
   `,
   styleUrls: ['app-item.component.css'],
