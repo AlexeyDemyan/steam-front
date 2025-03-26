@@ -26,50 +26,92 @@ import { RatingComponent } from './rating-component';
           </div>
           <div class="app-item-tags">
             <p>#Tag 1</p>
+
             <p>#Another tag</p>
+
             <p>#And yet another tag</p>
+
             <p>#Oh one more tag!</p>
+
             <p>#Tag 1</p>
+
             <p>#Another tag</p>
+
             <p>#And yet another tag</p>
+
             <p>#Oh one more tag!</p>
+
             <p>#Tag 1</p>
+
             <p>#Another tag</p>
+
             <p>#And yet another tag</p>
+
             <p>#Oh one more tag!</p>
+
             <p>#Tag 1</p>
+
             <p>#Another tag</p>
+
             <p>#And yet another tag</p>
+
             <p>#Oh one more tag!</p>
           </div>
         </div>
       </summary>
       <div class="extra-info">
         <div class="rating">
+          <div class="current-rating-text">Current Rating</div>
+          <div class="current-rating-value">5</div>
           <app-app-item-rating />
+          <button class="drop-rating">Drop Rating</button>
         </div>
         <div class="comment">
-          <span (click)="testCommentFunc()">Comment field here</span>
+          <span (click)="testCommentFunc()" #comment>Commentss field here</span>
+          <input type="text" [placeholder]="comment.textContent" />
+          <button>Confirm</button>
         </div>
         <div class="user-tags">
           <p>#Tag 1</p>
+          <button>del</button>
           <p>#Another tag</p>
+          <button>del</button>
           <p>#And yet another tag</p>
+          <button>del</button>
           <p>#Oh one more tag!</p>
+          <button>del</button>
           <p>#Tag 1</p>
+          <button>del</button>
           <p>#Another tag</p>
+          <button>del</button>
           <p>#And yet another tag</p>
+          <button>del</button>
           <p>#Oh one more tag!</p>
+          <button>del</button>
           <p>#Tag 1</p>
+          <button>del</button>
           <p>#Another tag</p>
+          <button>del</button>
           <p>#And yet another tag</p>
+          <button>del</button>
           <p>#Oh one more tag!</p>
+          <button>del</button>
           <p>#Tag 1</p>
+          <button>del</button>
           <p>#Another tag</p>
+          <button>del</button>
           <p>#And yet another tag</p>
+          <button>del</button>
           <p>#Oh one more tag!</p>
+          <button>del</button>
+          <select name="new-tag" id="new-tag">
+            <option value=""></option>
+            <option value="Some new tag">Some new tag</option>
+            <option value="Another new tag">Another new tag</option>
+            <option value="And another new tag">And another new tag</option>
+          </select>
         </div>
-        <div class="delete-button">[Delete]</div>
+        <button class="delete-button">[Delete]</button>
       </div>
     </details>
   `,
