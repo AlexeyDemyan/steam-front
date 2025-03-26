@@ -49,9 +49,3 @@ export class RatingComponent {
     console.log(value);
   };
 }
-
-// $(':radio').change(
-//     function(){
-//       $('.choice').text( this.value + ' stars' );
-//     }
-//   )
