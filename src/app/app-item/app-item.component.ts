@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RatingComponent } from './rating-component';
 import { CustomButton } from '../custom-button/custom-button.component';
+import { CustomButtonSettings } from '../custom-button/custom-button-settings.type';
 
 @Component({
   selector: 'app-app-item',
@@ -62,11 +63,9 @@ import { CustomButton } from '../custom-button/custom-button.component';
       </summary>
       <div class="extra-info">
         <div class="rating">
-          <div class="current-rating-text">Current Rating</div>
-          <div class="current-rating-value">5</div>
+          <div class="current-rating-text">Current Rating: 5</div>
           <app-app-item-rating />
-          <app-custom-button />
-          <button class="drop-rating">Drop Rating</button>
+          <app-custom-button [buttonSettings]="dropRatingButtonSettings" />
         </div>
         <div class="comment">
           <span (click)="testCommentFunc()" #comment>Commentss field here</span>
@@ -122,5 +121,12 @@ import { CustomButton } from '../custom-button/custom-button.component';
 export class AppItemComponent {
   testCommentFunc = () => {
     console.log('testing comment functionality');
+  };
+
+  dropRatingButtonSettings: CustomButtonSettings = {
+    text: 'Drop Rating',
+    cb: () => {
+      console.log('clicking drop rating button');
+    },
   };
 }
