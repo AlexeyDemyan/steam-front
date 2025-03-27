@@ -16,7 +16,7 @@
   line-height: 2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width:fit-content;
+  width: fit-content;
 
   &.active {
     color: hsl(260, 100%, 80%);
@@ -26,4 +26,16 @@
   &:not(.active):hover {
     color: rgba(255, 255, 255, 0.87);
   }
+}
+
+.small-button {
+  line-height: 1rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.big-button {
+  line-height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }

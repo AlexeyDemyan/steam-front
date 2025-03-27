@@ -5,7 +5,7 @@ import { CustomButtonSettings } from './custom-button-settings.type';
   selector: 'app-custom-button',
   imports: [],
   template: `
-    <span class="custom-button" (click)="buttonSettings.cb()">{{
+    <span [class]="'custom-button ' + buttonSettings.className" (click)="buttonSettings.cb()">{{
       buttonSettings.text
     }}</span>
   `,

@@ -28,35 +28,20 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
           </div>
           <div class="app-item-tags">
             <p>#Tag 1</p>
-
             <p>#Another tag</p>
-
             <p>#And yet another tag</p>
-
             <p>#Oh one more tag!</p>
-
             <p>#Tag 1</p>
-
             <p>#Another tag</p>
-
             <p>#And yet another tag</p>
-
             <p>#Oh one more tag!</p>
-
             <p>#Tag 1</p>
-
             <p>#Another tag</p>
-
             <p>#And yet another tag</p>
-
             <p>#Oh one more tag!</p>
-
             <p>#Tag 1</p>
-
             <p>#Another tag</p>
-
             <p>#And yet another tag</p>
-
             <p>#Oh one more tag!</p>
           </div>
         </div>
@@ -73,38 +58,46 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
           <button>Confirm</button>
         </div>
         <div class="user-tags">
-          <p>#Tag 1</p>
-          <button>del</button>
-          <p>#Another tag</p>
-          <button>del</button>
-          <p>#And yet another tag</p>
-          <button>del</button>
-          <p>#Oh one more tag!</p>
-          <button>del</button>
-          <p>#Tag 1</p>
-          <button>del</button>
-          <p>#Another tag</p>
-          <button>del</button>
-          <p>#And yet another tag</p>
-          <button>del</button>
-          <p>#Oh one more tag!</p>
-          <button>del</button>
-          <p>#Tag 1</p>
-          <button>del</button>
-          <p>#Another tag</p>
-          <button>del</button>
-          <p>#And yet another tag</p>
-          <button>del</button>
-          <p>#Oh one more tag!</p>
-          <button>del</button>
-          <p>#Tag 1</p>
-          <button>del</button>
-          <p>#Another tag</p>
-          <button>del</button>
-          <p>#And yet another tag</p>
-          <button>del</button>
-          <p>#Oh one more tag!</p>
-          <button>del</button>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
+          <div class="user-tag-container">
+            <p>#Tag 1</p>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+          </div>
           <select name="new-tag" id="new-tag">
             <option value=""></option>
             <option value="Some new tag">Some new tag</option>
@@ -125,8 +118,17 @@ export class AppItemComponent {
 
   dropRatingButtonSettings: CustomButtonSettings = {
     text: 'Drop Rating',
+    className: 'big-button',
     cb: () => {
       console.log('clicking drop rating button');
+    },
+  };
+
+  deleteTagButtonSettings: CustomButtonSettings = {
+    text: 'x',
+    className: 'small-button',
+    cb: () => {
+      console.log('clicking delete tag button');
     },
   };
 }

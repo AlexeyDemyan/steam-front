@@ -18,6 +18,7 @@
     background-size: contain;
   }
   input {
+    cursor: pointer;
     opacity: 0;
     display: inline-block;
     width: 20%;

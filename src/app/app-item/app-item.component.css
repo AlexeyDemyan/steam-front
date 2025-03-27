@@ -6,7 +6,7 @@ summary {
   display: flex;
   margin-top: 20px;
   height: 180px;
-  width: 1200px;
+  width: 1220px;
   border: 1px solid #272424;
   box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
   cursor: pointer;
@@ -53,6 +53,7 @@ summary:hover {
 
 .extra-info {
   width: 1200px;
+  padding: 10px;
   display: grid;
   grid-template-areas:
     'rating comment delete'
@@ -63,6 +64,9 @@ summary:hover {
 }
 
 .rating {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
   grid-area: rating;
 }
 
@@ -75,6 +79,7 @@ summary:hover {
 
 .user-tags {
   grid-area: tags;
+  gap: 10px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -82,6 +87,10 @@ summary:hover {
 
 .user-tags p {
   margin-right: 8px;
+}
+
+.user-tag-container {
+  display: flex;
 }
 
 .delete-button {
