@@ -99,3 +99,11 @@ summary:hover {
   display: flex;
   justify-content: flex-end;
 }
+
+.edit-comment-section-show {
+  display: flex;
+}
+
+.edit-comment-section-hide {
+  display: none;
+}

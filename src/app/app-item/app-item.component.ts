@@ -53,9 +53,15 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
           <app-custom-button [buttonSettings]="dropRatingButtonSettings" />
         </div>
         <div class="comment">
-          <span (click)="testCommentFunc()" #comment>Commentss field here</span>
-          <input type="text" [placeholder]="comment.textContent" />
-          <button>Confirm</button>
+          <span (click)="displayEditCommentSection(editcomment)" #comment
+            >Commentss field here</span
+          >
+          <div class="edit-comment-section-hide" #editcomment>
+            <input type="text" [placeholder]="comment.textContent" />
+            <app-custom-button
+              [buttonSettings]="confirmCommentButtonSettings"
+            />
+          </div>
         </div>
         <div class="user-tags">
           <div class="user-tag-container">
@@ -68,35 +74,35 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <div class="user-tag-container">
             <p>#Tag 1</p>
-            <app-custom-button [buttonSettings]="deleteTagButtonSettings"/>
+            <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
           <select name="new-tag" id="new-tag">
             <option value=""></option>
@@ -105,7 +111,7 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
             <option value="And another new tag">And another new tag</option>
           </select>
         </div>
-        <button class="delete-button">[Delete]</button>
+        <app-custom-button [buttonSettings]="deleteAppButtonSetting" />
       </div>
     </details>
   `,
@@ -114,6 +120,11 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
 export class AppItemComponent {
   testCommentFunc = () => {
     console.log('testing comment functionality');
+  };
+
+  displayEditCommentSection = (elt: HTMLDivElement) => {
+    console.log(elt.classList);
+    elt.classList.remove('edit-comment-section-hide');
   };
 
   dropRatingButtonSettings: CustomButtonSettings = {
@@ -129,6 +140,22 @@ export class AppItemComponent {
     className: 'small-button',
     cb: () => {
       console.log('clicking delete tag button');
+    },
+  };
+
+  deleteAppButtonSetting: CustomButtonSettings = {
+    text: 'DELETE',
+    className: 'big-button',
+    cb: () => {
+      console.log('clicking delete App button');
+    },
+  };
+
+  confirmCommentButtonSettings: CustomButtonSettings = {
+    text: 'Confirm',
+    className: 'big-button',
+    cb: () => {
+      console.log('clicking Confirm Comment button');
     },
   };
 }
