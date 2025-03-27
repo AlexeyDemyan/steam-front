@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { RatingComponent } from './rating-component';
+import { CustomButton } from '../custom-button/custom-button.component';
 
 @Component({
   selector: 'app-app-item',
-  imports: [RatingComponent],
+  imports: [RatingComponent, CustomButton],
   template: `
     <details>
       <summary>
         <div class="app-item-container">
           <img
             class="app-item-image"
-            src="/assets/desert.jpg"
-            alt="desert"
+            src="https://picsum.photos/324/150"
+            alt="app item picture"
             width="324"
             height="150"
           />
@@ -64,6 +65,7 @@ import { RatingComponent } from './rating-component';
           <div class="current-rating-text">Current Rating</div>
           <div class="current-rating-value">5</div>
           <app-app-item-rating />
+          <app-custom-button />
           <button class="drop-rating">Drop Rating</button>
         </div>
         <div class="comment">
