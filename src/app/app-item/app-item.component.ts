@@ -53,7 +53,11 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
           <app-custom-button [buttonSettings]="dropRatingButtonSettings" />
         </div>
         <div class="comment">
-          <span (click)="displayEditCommentSection(editcomment)" #comment
+          <span
+            (click)="
+              toggleDisplaySection(editcomment, 'edit-comment-section-hide')
+            "
+            #comment
             >Commentss field here</span
           >
           <div class="edit-comment-section-hide" #editcomment>
@@ -104,12 +108,17 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
             <p>#Tag 1</p>
             <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
-          <select name="new-tag" id="new-tag">
-            <option value=""></option>
-            <option value="Some new tag">Some new tag</option>
-            <option value="Another new tag">Another new tag</option>
-            <option value="And another new tag">And another new tag</option>
-          </select>
+          <div class="new-tag-section">
+            <app-custom-button [buttonSettings]="addNewTagButtonSettings" />
+            <select name="new-tag" id="new-tag">
+              <option value=""></option>
+              <option value="Some new tag">Some new tag</option>
+              <option value="Another new tag">Another new tag</option>
+              <option value="And another new tag">And another new tag</option>
+            </select>
+            <app-custom-button [buttonSettings]="confirmNewTagButtonSettings" />
+            <app-custom-button [buttonSettings]="cancelNewTagButtonSettings" />
+          </div>
         </div>
         <app-custom-button [buttonSettings]="deleteAppButtonSetting" />
       </div>
@@ -118,13 +127,12 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
   styleUrls: ['app-item.component.css'],
 })
 export class AppItemComponent {
-  testCommentFunc = () => {
-    console.log('testing comment functionality');
-  };
-
-  displayEditCommentSection = (elt: HTMLDivElement) => {
-    console.log(elt.classList);
-    elt.classList.remove('edit-comment-section-hide');
+  toggleDisplaySection = (elt: HTMLDivElement, className: string) => {
+    if (elt.classList.contains(className)) {
+      elt.classList.remove(className);
+    } else {
+      elt.classList.add(className);
+    }
   };
 
   dropRatingButtonSettings: CustomButtonSettings = {
@@ -158,4 +166,32 @@ export class AppItemComponent {
       console.log('clicking Confirm Comment button');
     },
   };
+
+  addNewTagButtonSettings: CustomButtonSettings = {
+    text: 'Add Tag',
+    className: 'big-button',
+    cb: () => {
+      console.log('clicking Add New Tag button');
+    },
+  };
+
+  confirmNewTagButtonSettings: CustomButtonSettings = {
+    text: 'Confirm',
+    className: 'big-button',
+    cb: () => {
+      console.log('clicking Confirm New Tag button');
+    },
+  };
+
+  cancelNewTagButtonSettings: CustomButtonSettings = {
+    text: 'Cancel',
+    className: 'big-button',
+    cb: () => {
+      console.log('clicking Cancel New Tag button');
+    },
+  };
+
+  constructor() {
+    console.log('calling App Item Component constructor');
+  }
 }
