@@ -58,9 +58,9 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
               toggleDisplaySection(editcomment, 'edit-comment-section-hide')
             "
             #comment
-            >Commentss field here</span
+            >Lorem  perspiciatis optio alias laborum cupiditate.</span
           >
-          <div class="edit-comment-section-hide" #editcomment>
+          <div class="edit-comment-section-show  edit-comment-section-hide" #editcomment>
             <input type="text" [placeholder]="comment.textContent" />
             <app-custom-button
               [buttonSettings]="confirmCommentButtonSettings"
