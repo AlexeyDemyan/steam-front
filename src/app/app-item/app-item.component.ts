@@ -58,9 +58,12 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
               toggleDisplaySection(editcomment, 'edit-comment-section-hide')
             "
             #comment
-            >Lorem  perspiciatis optio alias laborum cupiditate.</span
+            >Lorem perspiciatis optio alias laborum cupiditate.</span
           >
-          <div class="edit-comment-section-show  edit-comment-section-hide" #editcomment>
+          <div
+            class="edit-comment-section-show  edit-comment-section-hide"
+            #editcomment
+          >
             <input type="text" [placeholder]="comment.textContent" />
             <app-custom-button
               [buttonSettings]="confirmCommentButtonSettings"
@@ -108,17 +111,16 @@ import { CustomButtonSettings } from '../custom-button/custom-button-settings.ty
             <p>#Tag 1</p>
             <app-custom-button [buttonSettings]="deleteTagButtonSettings" />
           </div>
-          <div class="new-tag-section">
-            <app-custom-button [buttonSettings]="addNewTagButtonSettings" />
-            <select name="new-tag" id="new-tag">
-              <option value=""></option>
-              <option value="Some new tag">Some new tag</option>
-              <option value="Another new tag">Another new tag</option>
-              <option value="And another new tag">And another new tag</option>
-            </select>
-            <app-custom-button [buttonSettings]="confirmNewTagButtonSettings" />
-            <app-custom-button [buttonSettings]="cancelNewTagButtonSettings" />
-          </div>
+        </div>
+        <div class="new-tag-section">
+          <h4>New Tag:</h4>
+          <select name="new-tag" id="new-tag">
+            <option value=""></option>
+            <option value="Some new tag">Some new tag</option>
+            <option value="Another new tag">Another new tag</option>
+            <option value="And another new tag">And another new tag</option>
+          </select>
+          <app-custom-button [buttonSettings]="confirmNewTagButtonSettings" />
         </div>
         <app-custom-button [buttonSettings]="deleteAppButtonSetting" />
       </div>

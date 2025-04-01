@@ -57,7 +57,8 @@ summary:hover {
   display: grid;
   grid-template-areas:
     'rating comment delete'
-    'rating tags delete';
+    'rating tags delete'
+    'rating new-tag delete';
   min-height: 30px;
   grid-template-columns: 350px;
   background-color: #355e77;
@@ -87,6 +88,14 @@ summary:hover {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.new-tag-section {
+  grid-area: new-tag;
+  margin-top: 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .user-tags p {
@@ -121,4 +130,10 @@ input {
   height: 30px;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 5px;
+}
+
+select {
+  height: 30px;
+  border-radius: 5px;
 }
